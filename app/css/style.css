@@ -55,8 +55,8 @@ hr {
     background:#eee;
 }
 .animate-view.ng-enter { 
-	left: 600px; 
-	right: -600px; 
+	left: 700px; 
+	right: -700px; 
 }
 .animate-view.ng-enter.ng-enter-active { 
 	left: 0; 
@@ -67,7 +67,66 @@ hr {
 	right:0; 
 }
 .animate-view.ng-leave.ng-leave-active { 
-	left: -600px; 
-	right: 600px;  
+	left: -700px; 
+	right: 700px;  
+}
+tr:hover {
+	background-color: lightblue !important;
+}
+td {
+	padding: 5px;
+}
+img {
+	width: 250px;
+}
+@-webkit-keyframes loadAnimation {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0
+  }
+  to {
+   opacity: 1;
+  }
+}
+@-moz-keyframes loadAnimation {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0
+  }
+  to {
+   opacity: 1;
+  }
+}
+@-o-keyframes loadAnimation {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0
+  }
+  to {
+   opacity: 1;
+  }
+}
+@keyframes loadAnimation {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0
+  }
+  to {
+   opacity: 1;
+  }
 }
 
+.load {
+  -webkit-animation: loadAnimation 2s infinite;
+  -moz-animation: loadAnimation 2s infinite;
+  -o-animation: loadAnimation 2s infinite;
+  animation: loadAnimation 2s infinite;
+}
