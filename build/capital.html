@@ -1,0 +1,39 @@
+<div ng-controller = "CapitalCtrl">
+	<h1> {{ country.countryName }} </h1>
+	<p class="load" ng-if="isSearching">Loading...</p>
+<table>
+	<tr>
+		<td class = "text-right">Population of Country:</td>
+		<td> {{ country.population | number }} </td>
+	</tr>
+	<tr>
+		<td class = "text-right">Area:</td>
+		<td> {{ country.areaInSqKm }} </td>
+	</tr>
+	<tr>
+		<td class = "text-right">Capital:</td>
+		<td> {{ country.capital }} </td>
+	</tr>
+	<tr>
+		<td class = "text-right">Population of Capital:</td>
+		<td>{{ capital.population | number }}</td>
+	</tr>
+	<tr>
+		<td class = "text-right"> {{ results }} Neighbors:</td>
+		<td> <span ng-repeat = "neighbor in neighbors"><a ng-href = "/#/countries/{{ neighbor.countryCode }}/capital">{{ neighbor.countryName }}</a><span ng-hide="$last">,</span> </span></td>
+	</tr>
+	<tr>
+		<td>
+			<img ng-src="http://www.geonames.org/img/country/250/{{countryCode | uppercase}}.png" alt="Description" class="img-responsive"/>
+		</td>
+		<td>
+			<img ng-src="http://www.geonames.org/flags/x/{{countryCode | lowercase}}.gif" alt="Description" class="img-responsive"/> 
+		</td>
+	</tr>
+</table>
+
+<p class = "text-center">
+	<a class="btn btn-default tmargin15" role="button" ng-href="/#/">Home</a>
+	<a class="btn btn-default tmargin15" role="button" ng-href="/#/countries">Browse Countries</a>
+</p>
+</div>
