@@ -8,7 +8,7 @@
 		<th>Continent</th>
 	</tr>
 	<tr ng-repeat = "country in countries">
-			<td><a ng-href = "countries_and_capitals/app/#/countries/{{ country.countryCode }}/capital"> {{ country.countryName }} </a></td>
+			<td><a ng-href = "/countries_and_capitals/app/#/countries/{{ country.countryCode }}/capital"> {{ country.countryName }} </a></td>
 			<td> {{ country.countryCode }} </td>
 			<td> {{ country.capital }} </td>
 			<td> {{ country.areaInSqKm }} </td>
@@ -17,5 +17,5 @@
 	</tr>
 </table>
 <p class="text-center">
-	<a class="btn btn-default tmargin15" role="button" ng-href="countries_and_capitals/app/#/">Home</a>
+	<a class="btn btn-default tmargin15" role="button" ng-href="/countries_and_capitals/app/#/">Home</a>
 </p>
